@@ -1,9 +1,9 @@
 library(utils)
 library(datasets)
 fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
-download.file(fileURL, "./power.zip") # "put the content of the"attach" the zip to temp file 
-unzip("./power.zip")
-datafile <- read.table("./household_power_consumption.txt", sep = ";", header= TRUE, na= "?")
+download.file(fileURL, "./power.zip") # download file
+unzip("./power.zip") # unzip file
+datafile <- read.table("./household_power_consumption.txt", sep = ";", header= TRUE, na= "?") # read file
 
 #Convert the date and time 
 datafile$Time <- strptime(paste(datafile$Date, datafile$Time), "%d-%m-%Y %H:%M:%S")
