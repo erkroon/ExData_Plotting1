@@ -17,12 +17,12 @@ newfile <- subset(datafile, Date %in% dates)
 png(filename = "plot3.png",
     width = 480, height = 480,
     units = "px", bg = "transparent")
-plot(newfile$Time, Sub_metering_1,
+plot(newfile$Time, newfile$Sub_metering_1,
     type = "l",
     col = "black",
     xlab = "", ylab = "Energy sub metering")
-lines(newfile$Time, Sub_metering_2, col = "red")
-lines(newfile$Time, Sub_metering_3, col = "blue")
+lines(newfile$Time, newfile$Sub_metering_2, col = "red")
+lines(newfile$Time, newfile$Sub_metering_3, col = "blue")
 legend("topright",
        col = c("black", "red", "blue"),
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
