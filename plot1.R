@@ -6,8 +6,8 @@ unzip("./power.zip") # unzip file
 datafile <- read.table("./household_power_consumption.txt", sep = ";", header= TRUE, na= "?") # read file
 
 #Convert the date and time 
-datafile$Time <- strptime(paste(datafile$Date, datafile$Time), "%d-%m-%Y %H:%M:%S")
-datafile$Date <- as.Date(datafile$Date, "%d-%m-%Y")
+datafile$Time <- strptime(paste(datafile$Date, datafile$Time), "%d/%m/%Y %H:%M:%S")
+datafile$Date <- as.Date(datafile$Date, "%d/%m/%Y")
 
 ##get the two days
 dates <- as.Date(c("2007-02-01", "2007-02-02"), "%Y-%m-%d")
